@@ -10,7 +10,7 @@
     <style>
         /* --- General and Existing CSS --- */
         body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #000; color: #333; line-height: 1.6; }
-        .lock-icon{ height: 40px; width: 40px; }
+        .lock-icon{ height: 40px; width: 40px; color: white;}
         header { background: #222831; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         header h1 { font-family: 'Montserrat', sans-serif; margin: 0; }
         
@@ -67,8 +67,8 @@
         /* --- END NEW UI --- */
 
         .search-bar { display: flex; gap: 10px; margin: 20px 0; }
-        .search-bar input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; color: #000; }
-        .search-bar select { padding: 10px; border: 1px solid #ddd; border-radius: 5px; color: #000; }
+        .search-bar input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 50px; color: #000000f4; }
+        .search-bar select { padding: 10px; border: 1px solid #ddd; border-radius: 50px; color: #000; }
         .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
         .product { background: #393E46; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
         .product:hover { transform: translateY(-5px); }
@@ -141,14 +141,16 @@
         .feedback-card {
             min-height: 120px; /* Changed height to min-height for content flexibility */
             min-width: 300px; 
-            padding: 25px;
-            background: #1f1e14;
+            padding: 25px 25px;
+            background: #00000072;
             border-radius: 20px ;
             box-shadow: 0 6px 15px rgba(79, 73, 73, 0.411);
             transition: all 0.3s ease-in-out;
-            border-left: 2px solid #28a745;
+            border-left: 2px solid #ffffff;
         }
         .feedback-card:hover {
+            border-left: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
             box-shadow: 0 10px 20px rgba(174, 153, 153, 0.442);
             transform: translateY(-3px);
         }
@@ -217,7 +219,7 @@
         /* --- End Slider & Partners --- */
 
         /* --- FOOTER STYLES (Kept for consistency) --- */
-        .custom-website-footer { background-color: #1e3a5f; color: #f0f0f0; padding: 40px 5% 20px 5%; font-family: 'Roboto', sans-serif; box-sizing: border-box; margin-top: 40px; }
+        .custom-website-footer { background-color: #222831; color: #f0f0f0; padding: 40px 5% 20px 5%; font-family: 'Roboto', sans-serif; box-sizing: border-box; margin-top: 40px; }
         .footer-links-container { display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto 30px auto; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 30px; flex-wrap: wrap; }
         .footer-section { min-width: 180px; padding: 0 10px; }
         .footer-section h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px; color: white; font-family: 'Montserrat', sans-serif; }
@@ -239,7 +241,7 @@
 </head>
 <body>
     <header>
-   <img src="anonymous.png" alt="Lock Icon" class="lock-icon"> <h1>Passwordo</h1>
+ <h1>Gorge</h1>
         <div class="menu-icon" onclick="openNav()">
             <i class="fas fa-bars"></i>
         </div>
@@ -549,11 +551,9 @@
             { id: 12, name: 'Wireless Charger', price: 19.99, category: 'Electronics', img: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400', desc: 'Fast charging for devices.' },
             { id: 13, name: 'Biometric Keyboard', price: 89.99, category: 'Security', img: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400', desc: 'Keyboard with built-in fingerprint reader.' },
             { id: 14, name: 'Surveillance Camera', price: 119.99, category: 'Security', img: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400', desc: 'HD camera for home security monitoring.' },
-            { id: 15, name: 'Portable Hard Drive', price: 54.99, category: 'Electronics', img: 'https://images.unsplash.com/photo-1606230960216-e18be2a5622e?w=400', desc: '1TB external storage for backups.' },
             { id: 17, name: 'Two-Factor Authenticator', price: 15.99, category: 'Security', img: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400', desc: 'Hardware token for secure logins.' },
             { id: 18, name: 'Smartphone Stand', price: 22.99, category: 'Accessories', img: 'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=400', desc: 'Adjustable stand for hands-free viewing.' },
             // NEW PRODUCT ADDED HERE:
-            { id: 19, name: 'Smart Home Security Hub', price: 199.99, category: 'Security', img: 'https://images.unsplash.com/photo-1563770425983-3663a8a9a2c3?w=400', desc: 'Central command for all your smart security devices.' }
         ];
 
         // --- Core UI Functions ---
